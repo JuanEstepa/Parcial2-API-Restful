@@ -14,11 +14,15 @@ module.exports = {
   save: async (req, res) => {
     try {
       const player = new Player(req.body);
+      const teamExist = await Team.findById(player.team);
 
-      //TODO. validar que el código no exista, si existe return 201
-      const result = await player.save();
+      if (!teamExist) {
+        return res.status(404).json({ msg: "El Equipo no Existe" });
+      } else {
+        const result = await player.save();
 
-      return res.status(201).json({ data: player });
+        return res.status(201).json({ data: player });
+      }
     } catch (err) {
       return res.status(500).json({ err: err });
     }
