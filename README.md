@@ -29,3 +29,15 @@ GET: http://localhost:3000/players/
 ## Buscar jugador por id
 
 GET: http://localhost:3000/players/:id
+
+## Agregar un nuevo jugador
+
+POST: http://localhost:3000/players/
+
+## Actualizar un jugador
+
+PUT: http://localhost:3000/players/:id
+
+## Eliminar un jugador
+
+DELETE: http://localhost:3000/players/:id
