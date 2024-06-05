@@ -1,0 +1,17 @@
+const routes = require("express").Router();
+
+const {
+  findAll,
+  save,
+  findById,
+  update,
+  erase,
+} = require("../controllers/playerController");
+
+routes.get("/", findAll);
+routes.post("/", save);
+routes.get("/:id", findById);
+routes.put("/:id", update);
+routes.delete("/:id", erase);
+
+module.exports = routes;
