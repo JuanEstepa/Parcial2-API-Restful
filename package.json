@@ -13,7 +13,7 @@
     "node",
     "cors"
   ],
-  "author": "Juan Andre Gonzalez Estepa",
+  "author": "Juan Andres Gonzalez Estepa",
   "license": "ISC",
   "devDependencies": {
     "morgan": "^1.10.0",
